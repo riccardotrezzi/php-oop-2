@@ -15,7 +15,7 @@
         public $title;
         public $price;
         public $image;
-        protected $category;
+        public $category;
 
         function __construct(string $title, float $price, string $image, Category|null $category) {
             $this->title = $title;
@@ -70,64 +70,75 @@
     $catsProduct = new Product(
         'Prodotto per Gatti',
         10.50,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.quattrozampeinfamiglia.it%2Fgatti-giganti-quali-sono-perche-sceglierli-e-come-curarli%2F&psig=AOvVaw2DyHidIsSa7tl-Y_B7Ef1f&ust=1729095594176000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKDw6ZflkIkDFQAAAAAdAAAAABAE',
-        $gatti
+        'https://img.poweredcache.net/www.quattrozampeinfamiglia.it/wp-content/uploads/2023/11/Gatti-giganti-1.jpg?rs=fit&w=900&h=600&ssl=1&format=webp',
+        $cats
     );
 
     $catsFood = new Food(
-        'Cibo per Gatti - Felix',
+        'Cibo per Gatti',
         15.99,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmolinopisoni.it%2Fcibo-umido-gatti%2F2287-purina-felix-le-ghiottonerie-selezioni-deliziose-in-gelatina-12x85g&psig=AOvVaw3DElInntzojUhTcji4G313&ust=1729093965616000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiR8Y_fkIkDFQAAAAAdAAAAABAE',
-        $gatti,
+        'https://molinopisoni.it/56502-large_default/purina-felix-le-ghiottonerie-selezioni-deliziose-in-gelatina-12x85g.jpg',
+        $cats,
         'Carne', 'Carote', 'Pomodoro'
     );
 
     $catsToy = new Toy(
         'Gioco per Gatti',
         20.99,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ulissequalityshop.com%2Fprodotto%2Fcamon-palestrina-in-peluche-con-gioco-per-gatti%2F&psig=AOvVaw12UcyWWbJ8Gw-ylhBd-ZFj&ust=1729095190905000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDo99bjkIkDFQAAAAAdAAAAABAJ',
-        $gatti,
+        'https://www.ulissequalityshop.com/wp-content/uploads/2017/04/camon-palestrina-gatti-gioco-appeso.jpg',
+        $cats,
         'Plastic, Polyester'
     );
 
     $catsBed = new PetBed(
         'Cuccia per Gatti',
         30.99,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.it%2FInterno-Inferiore-Antiscivolo-Domestici-capannone%2Fdp%2FB0CKSRJ2XK&psig=AOvVaw0-glZM1A_31SLPb3aE5zrv&ust=1729095307110000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjSj4_kkIkDFQAAAAAdAAAAABAE',
-        $gatti,
+        'https://m.media-amazon.com/images/I/71hK+WBbldL._AC_UF894,1000_QL80_.jpg',
+        $cats,
         'small'
     );
 
     $dogsProduct = new Product(
         'Prodotto per Cani',
         10.50,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fexclusion.it%2Fangeli-a-4-zampe-i-1000-modi-di-un-cane-per-aiutarci%2F&psig=AOvVaw2_y0SNljIjX8HHyRSTVyY3&ust=1729095760966000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDcoeflkIkDFQAAAAAdAAAAABAE',
-        $cani
+        'https://exclusion.it/wp-content/uploads/2024/02/cani-da-lavoro.jpeg',
+        $dogs
     );
 
     $dogsFood = new Food(
         'Cibo per Cani',
         15.99,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dm-drogeriemarkt.it%2Fcesar-cibo-umido-in-salsa-per-cani-con-pollo-e-verdure-p5900951253461.html&psig=AOvVaw2vvxvRvlyvIPrSKfquB2K0&ust=1729095781559000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOCdtfDlkIkDFQAAAAAdAAAAABAE',
-        $cani,
+        'https://www.ilcarlinoamodomio.it/wp-content/uploads/2020/07/crocchette-cani.jpg',
+        $dogs,
         'Carne', 'Carote', 'Pomodoro'
     );
 
     $dogsToy = new Toy(
         'Gioco per Cani',
         12.99,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amoreanimaleshop.it%2Fferribiella-classic-kong-portabiscotto%2F&psig=AOvVaw0dtxA-UUxBTDwG_EHY82Z8&ust=1729095803808000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDU8vrlkIkDFQAAAAAdAAAAABAE',
-        $cani,
+        'https://www.amoreanimaleshop.it/wp-content/uploads/2017/01/Ferribiella-Classic-Kong-Portabiscotto.jpg',
+        $dogs,
         'Plastic, Polyester'
     );
 
     $dogsBed = new PetBed(
         'Cuccia per Cani',
         90.99,
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.zoomalia.it%2Fnegozio-di-animali%2Fcuccia-in-legno-per-cani-premium-domus-p-112.html&psig=AOvVaw2x5VBkIB6DB0CwIZNHoXg_&ust=1729095832080000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMic7YjmkIkDFQAAAAAdAAAAABAJ',
-        $cani,
+        'https://static.zoomalia.com/prod_img/112/xl_4529431c87f273e507e6040fcb07dcb45091548319881.jpg',
+        $dogs,
         'Extra Large'
     );
+
+    $products = [
+        $catsProduct,
+        $catsFood,
+        $catsToy,
+        $catsBed,
+        $dogsProduct,
+        $dogsFood,
+        $dogsToy,
+        $dogsBed
+    ]
 
     
 ?>
@@ -142,12 +153,50 @@
 
     <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    
+    <!--Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <body>
-        <div class="container">
-            <div>
 
+        <main>
+            <div class="container">
+                <div classs="row g-3">
+                    <?php
+                        foreach ($products as $product) {
+                    ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                <div class="card">
+                                    <img src="<?php echo $product->image; ?>" class="card-img-top" alt="<?php echo $product->title; ?>">
+                                    <div class="card-body">
+                                        <h2>
+                                            <?php echo $product->title; ?>
+                                        </h2>
+                                        <h6>
+                                            <i class="fa-solid fa-tag"></i>
+                                            <?php echo $product->category->icon; ?> 
+                                            <?php echo $product->category->name; ?> 
+                                        </h6>
+                                        <hr>
+                                        <h5>
+                                            € <?php echo $product->price; ?>
+                                        </h5>
+
+                                        <h6>
+                                            Category: <?php echo get_class($product); ?> 
+                                        </h6>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                    <?php
+                        }
+                    ?>
+                </div>
             </div>
-        </div>
+        </main>
+            
     </body>
 </html>
