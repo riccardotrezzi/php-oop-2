@@ -1,7 +1,11 @@
 <?php
     
-    class Category {
+    trait Name {
         public $name;
+    }
+
+    class Category  {
+        use Name;
         public $icon;
 
         function __construct(string $name, string $icon) {
@@ -28,7 +32,7 @@
             return $this->category;
         }
 
-        public function setCategory(Category|null  $category) {
+        public function setCategory(Category|null $category) {
             $this->category = $category;
         }
     }
@@ -160,7 +164,7 @@
     <body>
 
         <main>
-            <div class="container">
+            <div class="container my-4">
                 <div classs="row g-3">
                     <?php
                         foreach ($products as $product) {
@@ -169,6 +173,7 @@
                                 <div class="card">
                                     <img src="<?php echo $product->image; ?>" class="card-img-top" alt="<?php echo $product->title; ?>">
                                     <div class="card-body">
+                                        
                                         <h2>
                                             <?php echo $product->title; ?>
                                         </h2>
@@ -185,7 +190,6 @@
                                         <h6>
                                             Category: <?php echo get_class($product); ?> 
                                         </h6>
-
 
                                     </div>
                                 </div>
